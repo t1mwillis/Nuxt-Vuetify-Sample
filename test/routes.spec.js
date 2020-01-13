@@ -9,12 +9,10 @@ let nuxt = null
 
 // Init Nuxt.js and create a server listening on localhost:4000
 beforeAll(async () => {
-  // const config = {
-  //   dev: false,
-  //   rootDir: resolve(__dirname, '..'),
-  //   buildModules:['@nuxtjs/vuetify'],
-  //   modules: ['@nuxtjs/style-resources']
-  // }
+  const config = {
+    dev: false,
+    rootDir: resolve(__dirname, '..')
+  }
   // TODO consider using our own config
   nuxt = new Nuxt(config)
   await new Builder(nuxt).build()
